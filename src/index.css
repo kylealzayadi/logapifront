@@ -1,0 +1,267 @@
+:root {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #0f1e2e;
+  background-color: #f2f6fb;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: radial-gradient(circle at 0% 0%, #dceefe 0%, #f4f7fb 45%, #edf1f7 100%);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+#root {
+  width: 100%;
+}
+
+.app-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.app-header {
+  margin-bottom: 1rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #1f5a94;
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.app-header h1 {
+  font-size: 1.9rem;
+  color: #112f4e;
+}
+
+.subtitle {
+  margin-top: 0.4rem;
+  color: #33506b;
+}
+
+.toolbar {
+  background: #ffffff;
+  border: 1px solid #d9e2ee;
+  border-radius: 14px;
+  padding: 0.9rem;
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.search-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #27415c;
+}
+
+.search-input {
+  width: 100%;
+  border: 1px solid #b9c9dc;
+  border-radius: 10px;
+  padding: 0.7rem 0.8rem;
+  font-size: 0.98rem;
+}
+
+.search-input:focus {
+  outline: 2px solid #9cc7f5;
+  border-color: #6aa9ec;
+}
+
+.state-text {
+  background: #ffffff;
+  border: 1px solid #d9e2ee;
+  border-radius: 10px;
+  padding: 0.9rem;
+  color: #33506b;
+}
+
+.error-text {
+  color: #8f2f2f;
+  border-color: #e9c6c6;
+  background: #fff5f5;
+}
+
+.orders-layout {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 2fr 1fr;
+}
+
+.table-wrap,
+.details-panel {
+  background: #ffffff;
+  border: 1px solid #d9e2ee;
+  border-radius: 14px;
+}
+
+.table-wrap {
+  overflow: hidden;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.orders-table th,
+.orders-table td {
+  text-align: left;
+  padding: 0.75rem 0.85rem;
+  border-bottom: 1px solid #edf2f8;
+}
+
+.orders-table th {
+  background: #f7faff;
+  color: #2d4a66;
+  font-weight: 700;
+  font-size: 0.84rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.orders-table tbody tr {
+  cursor: pointer;
+}
+
+.orders-table tbody tr:hover {
+  background: #f5f9ff;
+}
+
+.selected-row {
+  background: #e9f3ff;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.badge-delivered {
+  background: #e8f7ee;
+  color: #1f7a3b;
+}
+
+.badge-shipped {
+  background: #e9f2ff;
+  color: #1f5ea8;
+}
+
+.badge-processing {
+  background: #fff7dd;
+  color: #9d7600;
+}
+
+.badge-pending {
+  background: #fff0e4;
+  color: #bf5b05;
+}
+
+.badge-cancelled {
+  background: #fdeaea;
+  color: #b22727;
+}
+
+.details-panel {
+  padding: 1rem;
+  display: grid;
+  gap: 0.7rem;
+  align-content: start;
+}
+
+.details-panel h2 {
+  font-size: 1.15rem;
+  color: #0f2d4b;
+}
+
+.details-panel h3 {
+  margin-top: 0.3rem;
+  font-size: 0.96rem;
+  color: #1c466e;
+}
+
+.items-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: #2b4863;
+}
+
+.cards-view {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .orders-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .details-panel {
+    order: -1;
+  }
+}
+
+@media (max-width: 700px) {
+  .orders-table {
+    display: none;
+  }
+
+  .cards-view {
+    display: grid;
+    gap: 0.65rem;
+    padding: 0.65rem;
+  }
+
+  .order-card {
+    border: 1px solid #e2eaf3;
+    border-radius: 12px;
+    padding: 0.75rem;
+    display: grid;
+    gap: 0.45rem;
+    cursor: pointer;
+  }
+
+  .order-card:hover {
+    background: #f7faff;
+  }
+
+  .selected-card {
+    border-color: #92beeb;
+    background: #edf5ff;
+  }
+
+  .card-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.92rem;
+  }
+
+  .card-label {
+    color: #48627d;
+    font-weight: 600;
+  }
+}
