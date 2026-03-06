@@ -1,2 +1,3 @@
 /api/* https://logistics-api-kyle.azurewebsites.net/api/:splat 200
+/favicon.ico /vite.svg 200
 /* /index.html 200
