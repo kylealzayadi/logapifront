@@ -1,1 +1,2 @@
+/api/* https://logistics-api-kyle.azurewebsites.net/api/:splat 200
 /* /index.html 200
